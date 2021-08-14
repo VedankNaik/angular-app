@@ -1,40 +1,82 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">PostsApp</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/post-list">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/post-add">Add Post</a>
-        </li>
-      </ul>
-      <ul class="d-flex">
-        <li class="nav-item">
-          <a class="nav-link" (click)="onSave()">Save</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="onFetch()">Fetch</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/auth">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/auth">Login</a>
-        </li>
-      </ul>
-    </div>
+<div class="header sticky-top">
+  <!--Content before waves-->
+  <div class="inner-header flex">
+    <nav class="navbar bg fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand logo" routerLink="/">PostsApp</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="navigate collapse navbar-collapse teal borderYtoX"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/post-list">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/post-add">Add Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onSave()">Save</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="onFetch()">Fetch</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </div>
-</nav>
+
+  <!--Waves-->
+  <div>
+    <svg
+      class="waves"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+      shape-rendering="auto"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        />
+      </defs>
+      <g class="parallax">
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="0"
+          fill="rgba(255,255,255,0.7"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="3"
+          fill="rgba(255,255,255,0.5)"
+        />
+        <use
+          xlink:href="#gentle-wave"
+          x="48"
+          y="5"
+          fill="rgba(255,255,255,0.3)"
+        />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+      </g>
+    </svg>
+  </div>
+  <!--Waves end-->
+</div>
